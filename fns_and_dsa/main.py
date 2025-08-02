@@ -1,13 +1,24 @@
-from arithmetic_operations import perform_operation
+class Product():
+	def __init__(a, name, price, quantity):
+		a.name = name
+		a.price = price
+		a.quantity = quantity
 
-def main():
-    print("Arithmetic Operations")
-    num1 = float(input("Enter the first number: "))
-    num2 = float(input("Enter the second number: "))
-    operation = input("Enter the operation (add, subtract, multiply, divide): ").strip().lower()
+	def calculate_total_value(a):
+		return a.quantity * a.price
+		
+my_product = Product("cake", 1000, 5) 
+print(my_product.calculate_total_value())		
 
-    result = perform_operation(num1, num2, operation)
-    print(f"Result: {result}")
+"""
+class Student:
+	def __init__(b, name, age):
+		b.name = name
+		b.age = age
+	def display_details(b):
+		return f"{b.name} {b.age}"
 
-if __name__ == "__main__":
-    main()
+my_student = Student("Natasha", "21")
+print(my_student.display_details())
+"""
+
