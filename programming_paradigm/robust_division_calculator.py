@@ -4,7 +4,7 @@ def safe_divide(numerator, denominator):
 		den = float(denominator)
 
 		result = num / den
-		return f"Result: {result:.2f}"
+		return f"Result: {result:.1f}"
 
 	except ZeroDivisionError:
 		return "Error: Cannot divide by zero."
