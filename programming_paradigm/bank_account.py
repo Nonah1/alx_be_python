@@ -9,11 +9,12 @@ class BankAccount:
 
 	def withdraw(self, amount):
 		self.amount = float(input("Enter the amount to be withdrawn: "))
-		if self.account_balance >= amount:
-			self.account_balance -= amount
-			print(f" You withdrew {amount}")
-		else:
-			print(" Insufficient balance ")
 
+		if amount > self.account_balance :
+			return False
+		else:
+			self.account_balance -= amount
+			return True
+		
 	def display_balance(self):
 		print(f"Available balance : {self.account_balance}")
